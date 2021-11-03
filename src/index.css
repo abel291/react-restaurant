@@ -3,13 +3,40 @@
 @tailwind utilities;
 
 /* primary */
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;600;700&display=swap");
 
 /* roboto */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 body {
-    @apply font-roboto;
+    @apply font-roboto text-gray-800;
 }
 .font-primary {
-    @apply font-medium uppercase;
+    @apply uppercase;
+}
+@layer utilities {
+    .py-content {
+        @apply py-8;
+    }
+    .pb-content {
+        @apply pb-8;
+    }
+    /* //md */
+    @media (min-width: 768px) {
+        .py-content {
+            @apply py-10;
+        }
+        .pb-content {
+            @apply pb-10;
+        }
+    }
+
+    /* //lg */
+    @media (min-width: 1024px) {
+        .py-content {
+            @apply py-12;
+        }
+        .pb-content {
+            @apply pb-12;
+        }
+    }
 }

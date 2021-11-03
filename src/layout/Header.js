@@ -3,6 +3,7 @@ import { ChevronDownIcon } from "@heroicons/react/solid"
 import { ShoppingBagIcon } from "@heroicons/react/outline"
 import { Fragment } from "react"
 import { Link, NavLink } from "react-router-dom"
+import Logo from "./Logo"
 const data = {
     title: "Sobre Nosotrtos",
     items: [
@@ -21,10 +22,8 @@ const Header = () => {
         <header className="py-5 text-white absolute inset-x-0 z-50">
             <div className="container">
                 <div className="h-20 flex items-center justify-between">
-                    <div className="text-2xl font-roboto">
-                        {/* <img src="" alt="Logo" /> */}
-                        <span className="font-light">React </span>
-                        <span className="font-bold">Restaurant</span>
+                    <div className="text-2xl">
+                        <Logo/>
                     </div>
                     <div>
                         <div className="flex items-center space-x-8 font-primary text-lg ">
@@ -33,7 +32,7 @@ const Header = () => {
                             <NavLink to="/">Galeria</NavLink>
                             <NavLink to="/">Blog</NavLink>
                             <NavLink to="/">Horario y hubicacion</NavLink>
-                            
+
                             <div className="text-2xl font-bold text-yellow-400">321-456-798</div>
                             <ShoppingBagIcon className="h-8 w-8" />
                         </div>

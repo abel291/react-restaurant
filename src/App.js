@@ -1,14 +1,17 @@
 
 import {  BrowserRouter as Router } from "react-router-dom"
-import BannerHero from "./components/BannerHero"
+
 import "./index.css"
-import Header from "./layout/Header.js"
+import Footer from "./layout/Footer"
+import Header from "./layout/Header"
+import Home from "./page/home/Home"
 
 function App() {
     return (
         <Router>
-            <Header/>
-            <BannerHero/>
+            {/* <Header/> */}
+            <Home/>
+            <Footer/>
         </Router>
     )
 }
