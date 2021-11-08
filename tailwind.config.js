@@ -1,3 +1,4 @@
+const { colors: defaultColors } = require("tailwindcss/defaultTheme")
 module.exports = {
     mode: "jit",
     purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
@@ -13,6 +14,13 @@ module.exports = {
                 "2xl": "6.5rem",
             },
         },
+
+        colors: {
+            ...defaultColors,
+            red: {
+                DEFAULT: "#e3000e",
+            },
+        },
         extend: {
             fontFamily: {
                 primary: ["Oswald"],
@@ -23,5 +31,5 @@ module.exports = {
     variants: {
         extend: {},
     },
-    plugins: [],
+    plugins: [require("@tailwindcss/forms"), require("@tailwindcss/line-clamp")],
 }
