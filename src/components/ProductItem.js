@@ -8,8 +8,8 @@ const ProductItem = ({ product }) => {
     return (
         <LinkProduct product={product}>
             <div className="rounded-lg overflow-hidden  border border-gray-200 flex flex-col h-full bg-white">
-                <div className="h-60 flex items-center justify-center p-3">
-                    <img src={product.img} alt={product.img} className="w-full max-h-full" />
+                <div className="h-80 md:h-60 flex items-center justify-center">
+                    <img src={product.img} alt={product.img} className="w-full max-h-full object-cover" />
                 </div>
                 <div className=" flex flex-col justify-between py-6 px-5 bg-white flex-grow">
                     <div className="">

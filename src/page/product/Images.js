@@ -15,12 +15,8 @@ const Images = ({ img, images }) => {
 
             <div className="flex justify-center items-center space-x-5 mt-5">
                 {images.map((image, index) => (
-                    <div
-                        key={index}
-                        onClick={() => handleclick(image.path)}
-                        className="cursor-pointer rounded-xl border border-gray-200 p-3"
-                    >
-                        <img className="w-16 h-1w-16 " src={image.path} alt={image.alt} />
+                    <div key={index} onClick={() => handleclick(image.img)} className="cursor-pointe">
+                        <img className="w-16 h-16 rounded-xl" src={image.img} alt={image.alt} />
                     </div>
                 ))}
             </div>
