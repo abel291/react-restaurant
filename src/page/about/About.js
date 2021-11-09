@@ -1,5 +1,6 @@
 import BannerHero from "../../components/BannerHero"
 import PageLoading from "../../components/PageLoading"
+import PageError from "../../components/PageError"
 import Promo from "../../components/Promo"
 import Subscribe from "../../components/Subscribe"
 import usePage from "../../hooks/usePage"
@@ -9,7 +10,7 @@ const About = () => {
 
     if (isLoading) return <PageLoading />
 
-    if (error) return "error"
+     if (error) return <PageError />
 
     return (
         <main>

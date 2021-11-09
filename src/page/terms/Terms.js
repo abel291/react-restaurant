@@ -1,5 +1,6 @@
 import BannerHero from "../../components/BannerHero"
 import PageLoading from "../../components/PageLoading"
+import PageError from "../../components/PageError"
 import usePage from "../../hooks/usePage"
 
 const Terms = () => {
@@ -7,7 +8,7 @@ const Terms = () => {
 
     if (isLoading) return <PageLoading />
 
-    if (error) return "error"
+     if (error) return <PageError />
     return (
         <main>
             <BannerHero img={pageData.banner.img} title={pageData.banner.title} />

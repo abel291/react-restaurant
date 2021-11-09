@@ -6,6 +6,7 @@ const fakeApi = async (callback) => {
             () => {
                
                 return resolve(callback())
+                //return reject(new Error('test Error'))
             },1000)
 
         //const number = Math.floor(Math.random() * 10)

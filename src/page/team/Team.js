@@ -3,13 +3,14 @@ import TeamItem from "./TeamItem"
 
 import usePage from "../../hooks/usePage"
 import PageLoading from "../../components/PageLoading"
+import PageError from "../../components/PageError"
 
 const Team = () => {
     const { isLoading, error, data: pageData } = usePage("team")
 
     if (isLoading) return <PageLoading />
 
-    if (error) return "error"
+     if (error) return <PageError />
 
     return (
         <main>

@@ -2,6 +2,7 @@ import BannerHero from "../../components/BannerHero"
 import usePage from "../../hooks/usePage"
 import GalleryImagesList from "./GalleryImagesList"
 import PageLoading from "../../components/PageLoading"
+import PageError from "../../components/PageError"
 
 const Gallery = () => {
 
@@ -9,7 +10,7 @@ const Gallery = () => {
 
     if (isLoading) return <PageLoading />
 
-    if (error) return "error"
+     if (error) return <PageError />
     return (
         <main>
             <BannerHero title="Galeria de imagenes" img="img/galleries/banner.jpg" breadcrumb="home / galeria" />

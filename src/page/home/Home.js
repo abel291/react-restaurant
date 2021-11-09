@@ -7,12 +7,14 @@ import MenuList from "./MenuList"
 
 import usePage from "../../hooks/usePage"
 import PageLoading from "../../components/PageLoading"
+import PageError from "../../components/PageError"
+
 const Home = () => {
     const { isLoading, error, data: pageData } = usePage("home")
 
     if (isLoading) return <PageLoading />
 
-    if (error) return "error"
+    if (error) return <PageError />
 
     return (
         <main>

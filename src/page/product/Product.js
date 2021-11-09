@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { useParams } from "react-router"
 import BannerHero from "../../components/BannerHero"
 import PageLoading from "../../components/PageLoading"
+import PageError from "../../components/PageError"
 import useProduct from "../../hooks/useProduct"
 
 import Description from "./Description"
@@ -18,7 +19,7 @@ const Product = () => {
     
     if (isLoading) return <PageLoading />
 
-    if (error) return "error"
+     if (error) return <PageError />
 
     return (
         <main>

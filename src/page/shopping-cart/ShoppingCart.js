@@ -1,5 +1,6 @@
 import BannerHero from "../../components/BannerHero"
 import PageLoading from "../../components/PageLoading"
+import PageError from "../../components/PageError"
 import { useShoppingCart } from "../../hooks/useShoppingCart"
 import CartItem from "./CartItem"
 import CartResumen from "./CartResumen"
@@ -9,7 +10,7 @@ const ShoppingCart = () => {
 
     if (isLoading) return <PageLoading />
 
-    if (error) return "error"
+     if (error) return <PageError />
 
     return (
         <main>

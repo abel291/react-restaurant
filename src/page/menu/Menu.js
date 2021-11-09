@@ -1,5 +1,6 @@
 import BannerHero from "../../components/BannerHero"
 import PageLoading from "../../components/PageLoading"
+import PageError from "../../components/PageError"
 import usePage from "../../hooks/usePage"
 import MenuSectionList from "./MenuSectionList"
 
@@ -8,7 +9,7 @@ const Menu = () => {
 
     if (isLoading) return <PageLoading />
 
-    if (error) return "error"
+     if (error) return <PageError />
 
     return (
         <main>
