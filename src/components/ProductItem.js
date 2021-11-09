@@ -1,40 +1,38 @@
-import { ShoppingBagIcon, StarIcon } from "@heroicons/react/outline"
+//import { ShoppingBagIcon } from "@heroicons/react/outline"
 
-const ProductItem = () => {
-    const item = {
-        name: "CRISPY CHICKEN",
-        start: 3,
-        description: "American cheese, tomato relish, avocado, lettuce, red onion",
-        img: "/img/burger.jpg",
-        price: "$9.75",
-    }
+import { fomatCurrency } from "../helpers/helpers"
+import LinkProduct from "./LinkProduct"
+import Stars from "./Stars"
+
+const ProductItem = ({ product }) => {
     return (
-        <div className="rounded-lg overflow-hidden  border border-gray-200">
-            <div className=" ">
-                <img src={item.img} alt="dd" className="object-cover w-full h-60" />
-            </div>
-            <div className="py-6 px-5 space-y-3">
-                <div className="flex space-x-2">
-                    <StarIcon className=" h-5 w-5 text-yellow-400 leading-none" />
-                    <StarIcon className=" h-5 w-5 text-yellow-400 leading-none" />
-                    <StarIcon className=" h-5 w-5 text-yellow-400 leading-none" />
-                    <StarIcon className=" h-5 w-5 text-yellow-400 leading-none" />
+        <LinkProduct product={product}>
+            <div className="rounded-lg overflow-hidden  border border-gray-200 flex flex-col h-full bg-white">
+                <div className="h-60 flex items-center justify-center p-3">
+                    <img src={product.img} alt={product.img} className="w-full max-h-full" />
                 </div>
-                <h5 className="text-3xl lg:text-2xl font-primary text-gray-900 ">{item.name}</h5>
-                <p className="font-light lg:text-sm text-gray-600">{item.description}</p>
-                <div className="flex items-center justify-between">
-                    <div className="bg-yellow-900 inline-block rounded py-2 px-3 ">
-                        <h5 className=" text-yellow-400 font-primary font-bold text-2xl lg:text-xl leading-none">{item.price}</h5>
+                <div className=" flex flex-col justify-between py-6 px-5 bg-white flex-grow">
+                    <div className="">
+                        <div>
+                            <Stars quantity={product.stars} />
+                        </div>
+                        <h5 className="mt-1 text-3xl lg:text-2xl font-primary text-gray-900  ">{product.name}</h5>
+                        <p className="my-4 font-light lg:text-sm text-gray-500 line-clamp-2">{product.description_min}</p>
                     </div>
-                    <div className="bg-yellow-400 flex items-end rounded py-2 px-3   text-gray-800 ">
-                        <ShoppingBagIcon
-                            className="h-5 w-5 lg:h-4 lg:w-4 mr-1 "
-                        />
-                        <div className="text-base lg:text-sm font-bold leading-none">Agregar</div>
+                    <div className="flex items-center justify-between">
+                        <div className="bg-yellow-900 inline-block rounded py-2 px-3 ">
+                            <h5 className="leading-none lg:leading-none text-yellow-400 font-primary font-bold text-2xl lg:text-xl ">
+                                {fomatCurrency(product.price)}
+                            </h5>
+                        </div>
+                        {/* <div className="badge badge-md bg-yellow-400 flex items-center ">
+                            <ShoppingBagIcon className="h-5 w-5 lg:h-4 lg:w-4 mr-1 " />
+                            <div className="text-base lg:text-sm font-bold leading-none">Agregar</div>
+                        </div> */}
                     </div>
                 </div>
             </div>
-        </div>
+        </LinkProduct>
     )
 }
 

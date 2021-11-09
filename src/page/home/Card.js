@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import Button from "../../components/Button"
 
 const Card = ({ title, subTitle, img, path }) => {
     return (
@@ -14,7 +13,7 @@ const Card = ({ title, subTitle, img, path }) => {
                         <h4 className="text-[2.37rem] text-yellow-900  font-primary mt-3 leading-none">{subTitle}</h4>
                     </div>
                     <div className="mt-6">
-                        <Button />
+                        <button className="btn btn-red btn-sm">Conoce mas</button>
                     </div>
                 </div>
             </div>

@@ -1,53 +1,57 @@
 import BannerHero from "../../components/BannerHero"
-import Button from "../../components/Button"
 import ProductItem from "../../components/ProductItem"
+import Promo from "../../components/Promo"
 import BannerDelivery from "./BannerDelivery"
 import Card from "./Card"
-import Card2 from "./Card2"
-import MenuItem from "./MenuItem"
 import MenuList from "./MenuList"
 
+import usePage from "../../hooks/usePage"
+import PageLoading from "../../components/PageLoading"
 const Home = () => {
+    const { isLoading, error, data: pageData } = usePage("home")
+
+    if (isLoading) return <PageLoading />
+
+    if (error) return "error"
+
     return (
         <main>
-            <BannerHero />
+            <BannerHero img={pageData.banner.img} title={pageData.banner.title} breadcrumb="" />
             <div className="container ">
                 <div className=" py-content">
-                    <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-                        <div className="md:col-span-6 lg:col-span-5">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {pageData.promos.map((promo) => (
+                            <div key={promo.title}>
+                                <Card title={promo.title} subTitle={promo.sub_title} img={promo.img} path={promo.img} />
+                            </div>
+                        ))}
+                        {/* <div className="md:col-span-6 lg:col-span-5">
                             <Card title="GET YOUR FREE" subTitle="CHEESE FRIES" img="/img/card-banner-2.jpg" path="/" />
                         </div>
                         <div className="md:col-span-6 lg:col-span-7">
                             <Card title="CRISPY CHICKEN" subTitle="BURGER IS BACK!" img="/img/card-banner-1.jpg" path="/" />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className=" py-content">
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-                            <ProductItem key={item} />
+                        {pageData.productsFeatured.map((product) => (
+                            <ProductItem product={product} key={product.id} />
                         ))}
                     </div>
                 </div>
             </div>
             <div className=" px-0 mx-3 py-content  ">
-                <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-3">
-                    <div>
-                        <Card2 />
-                    </div>
-                    <div className="lg:col-span-2">
-                        <Card2 />
-                    </div>
-                    <div>
-                        <Card2 />
-                    </div>
-                </div>
+                <Promo />
             </div>
-            <div className="container py-content  ">
-                <MenuList title="APERITIVOS" menu={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]} img="/img/home-2.jpg" />
-                <MenuList title="Pastas y ensaladas" menu={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]} img="/img/home-3.jpg" />
+            <div className="container   ">
+                {pageData.categories_section.map((category) => (
+                    <div className="py-content" key={category.id}>
+                        <MenuList title={category.name} products={category.products} img={category.img} />
+                    </div>
+                ))}
             </div>
-            <div className=" py-content">
+            <div className=" pt-content">
                 <BannerDelivery />
             </div>
         </main>

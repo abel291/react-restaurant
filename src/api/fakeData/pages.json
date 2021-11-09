@@ -1,0 +1,453 @@
+{
+    "home": {
+        "banner": {
+            "title": "COMPARTE Y DISFRUTA",
+            "img": "/img/home/banner.jpg"
+        },
+        "promos": [
+            {
+                "title": "GET YOUR FREE",
+                "sub_title": "CHEESE FRIES",
+                "img": "/img/card-banner-2.jpg",
+                "path": "/"
+            },
+            {
+                "title": "CRISPY CHICKEN",
+                "sub_title": "BURGER IS BACK!",
+                "img": "/img/card-banner-1.jpg",
+                "path": "/"
+            }
+        ],
+        "products": [
+            {
+                "id": 25,
+                "name": "Ab qui vitae eum.",
+                "slug": "ab-qui-vitae-eum",
+                "description_min": "Sed eligendi illum laudantium omnis enim tempore deserunt.",
+                "img": "/img/bebidas/img-1.jpg",
+                "stars": 4,
+                "price_old": 48,
+                "price": 34.08,
+                "menu": "bebidas"
+            },
+            {
+                "id": 26,
+                "name": "Est perspiciatis numquam.",
+                "slug": "est-perspiciatis-numquam",
+                "description_min": "Minima inventore tempora aut et consequatur quidem velit eos.",
+                "img": "/img/bebidas/img-2.jpg",
+                "stars": 3,
+                "price_old": 160,
+                "price": 131.2,
+                "menu": "bebidas"
+            },
+            {
+                "id": 27,
+                "name": "Doloremque ut deserunt.",
+                "slug": "doloremque-ut-deserunt",
+                "description_min": "Aperiam facere id tenetur accusantium blanditiis laborum adipisci magni. Ipsum magnam quo rerum alias esse sint voluptas.",
+                "img": "/img/bebidas/img-3.jpg",
+                "stars": 5,
+                "price_old": 178,
+                "price": 119.26,
+                "menu": "bebidas"
+            },
+            {
+                "id": 28,
+                "name": "Quia praesentium temporibus.",
+                "slug": "quia-praesentium-temporibus",
+                "description_min": "Dolores illo ducimus dolores et.",
+                "img": "/img/bebidas/img-4.jpg",
+                "stars": 4,
+                "price_old": 20,
+                "price": 12.6,
+                "menu": "bebidas"
+            },
+            {
+                "id": 29,
+                "name": "Sit repellendus dignissimos.",
+                "slug": "sit-repellendus-dignissimos",
+                "description_min": "Exercitationem eveniet rem at quo.",
+                "img": "/img/bebidas/img-5.jpg",
+                "stars": 4,
+                "price_old": 196,
+                "price": 156.8,
+                "menu": "bebidas"
+            },
+            {
+                "id": 30,
+                "name": "Delectus aut quae placeat.",
+                "slug": "delectus-aut-quae-placeat",
+                "description_min": "Adipisci sint laborum ut libero similique voluptatem earum quos. Non consequatur perferendis eos est tempora.",
+                "img": "/img/bebidas/img-6.jpg",
+                "stars": 4,
+                "price_old": 120,
+                "price": 102,
+                "menu": "bebidas"
+            },
+            {
+                "id": 31,
+                "name": "Necessitatibus recusandae non.",
+                "slug": "necessitatibus-recusandae-non",
+                "description_min": "Qui et qui ea cum id minus.",
+                "img": "/img/bebidas/img-7.jpg",
+                "stars": 4,
+                "price_old": 193,
+                "price": 133.17,
+                "menu": "bebidas"
+            },
+            {
+                "id": 32,
+                "name": "Itaque deserunt omnis in.",
+                "slug": "itaque-deserunt-omnis-in",
+                "description_min": "Consequuntur quis eos porro. Architecto suscipit maiores dolor voluptas tempore.",
+                "img": "/img/bebidas/img-8.jpg",
+                "stars": 3,
+                "price_old": 188,
+                "price": 163.56,
+                "menu": "bebidas"
+            }
+        ]
+    },
+    "menus": {
+        "banner": {
+            "title": "MENU",
+            "img": "/img/home/banner.jpg"
+        }
+    },
+    "about": {
+        "banner": {
+            "title": "Acerca de nosotros",
+            "img": "/img/about/banner.jpg"
+        }
+    },
+    "gallery": {
+        "banner": {
+            "title": "Galeria de imagenes",
+            "img": "img/galleries/banner.jpg"
+        },
+        "menus": [
+            {
+                "id": 1,
+                "name": "hamburguesas",
+                "slug": "hamburguesas",
+                "img": "/img/menus/hamburguesas/banner.jpg",
+                "images": [
+                    {
+                        "id": 1,
+                        "name": "Omnis reiciendis sequi omnis.",
+                        "slug": "omnis-reiciendis-sequi-omnis",
+                        "img": "/img/hamburguesas/img-1.jpg",
+                        "menu": "hamburguesas"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Nulla vitae nesciunt aut maxime.",
+                        "slug": "nulla-vitae-nesciunt-aut-maxime",
+                        "img": "/img/hamburguesas/img-2.jpg",
+                        "menu": "hamburguesas"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Alias quia vero ab.",
+                        "slug": "alias-quia-vero-ab",
+                        "img": "/img/hamburguesas/img-3.jpg",
+                        "menu": "hamburguesas"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Voluptatum impedit illo autem.",
+                        "slug": "voluptatum-impedit-illo-autem",
+                        "img": "/img/hamburguesas/img-4.jpg",
+                        "menu": "hamburguesas"
+                    },
+                    {
+                        "id": 5,
+                        "name": "Dolor distinctio qui.",
+                        "slug": "dolor-distinctio-qui",
+                        "img": "/img/hamburguesas/img-5.jpg",
+                        "menu": "hamburguesas"
+                    },
+                    {
+                        "id": 6,
+                        "name": "Porro sit in et.",
+                        "slug": "porro-sit-in-et",
+                        "img": "/img/hamburguesas/img-6.jpg",
+                        "menu": "hamburguesas"
+                    },
+                    {
+                        "id": 7,
+                        "name": "Voluptates perspiciatis voluptatibus fugiat.",
+                        "slug": "voluptates-perspiciatis-voluptatibus-fugiat",
+                        "img": "/img/hamburguesas/img-7.jpg",
+                        "menu": "hamburguesas"
+                    },
+                    {
+                        "id": 8,
+                        "name": "Officiis officiis eos.",
+                        "slug": "officiis-officiis-eos",
+                        "img": "/img/hamburguesas/img-8.jpg",
+                        "menu": "hamburguesas"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "ensaladas",
+                "slug": "ensaladas",
+                "img": "/img/menus/ensaladas/banner.jpg",
+                "images": [
+                    {
+                        "id": 9,
+                        "name": "Quos nihil ullam.",
+                        "slug": "quos-nihil-ullam",
+                        "img": "/img/ensaladas/img-1.jpg",
+                        "menu": "ensaladas"
+                    },
+                    {
+                        "id": 10,
+                        "name": "Voluptas ut repellendus.",
+                        "slug": "voluptas-ut-repellendus",
+                        "img": "/img/ensaladas/img-2.jpg",
+                        "menu": "ensaladas"
+                    },
+                    {
+                        "id": 11,
+                        "name": "Rerum facere saepe.",
+                        "slug": "rerum-facere-saepe",
+                        "img": "/img/ensaladas/img-3.jpg",
+                        "menu": "ensaladas"
+                    },
+                    {
+                        "id": 12,
+                        "name": "Rerum saepe delectus ad.",
+                        "slug": "rerum-saepe-delectus-ad",
+                        "img": "/img/ensaladas/img-4.jpg",
+                        "menu": "ensaladas"
+                    },
+                    {
+                        "id": 13,
+                        "name": "Deleniti nesciunt quaerat.",
+                        "slug": "deleniti-nesciunt-quaerat",
+                        "img": "/img/ensaladas/img-5.jpg",
+                        "menu": "ensaladas"
+                    },
+                    {
+                        "id": 14,
+                        "name": "Neque quia quia error.",
+                        "slug": "neque-quia-quia-error",
+                        "img": "/img/ensaladas/img-6.jpg",
+                        "menu": "ensaladas"
+                    },
+                    {
+                        "id": 15,
+                        "name": "Impedit in quo ut.",
+                        "slug": "impedit-in-quo-ut",
+                        "img": "/img/ensaladas/img-7.jpg",
+                        "menu": "ensaladas"
+                    },
+                    {
+                        "id": 16,
+                        "name": "Repudiandae asperiores dolore eius.",
+                        "slug": "repudiandae-asperiores-dolore-eius",
+                        "img": "/img/ensaladas/img-8.jpg",
+                        "menu": "ensaladas"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "pizza",
+                "slug": "pizza",
+                "img": "/img/menus/pizza/banner.jpg",
+                "images": [
+                    {
+                        "id": 17,
+                        "name": "Voluptatem quis et consequatur.",
+                        "slug": "voluptatem-quis-et-consequatur",
+                        "img": "/img/pizza/img-1.jpg",
+                        "menu": "pizza"
+                    },
+                    { "id": 18, "name": "Natus omnis ut.", "slug": "natus-omnis-ut", "img": "/img/pizza/img-2.jpg", "menu": "pizza" },
+                    {
+                        "id": 19,
+                        "name": "Nam atque nihil iste.",
+                        "slug": "nam-atque-nihil-iste",
+                        "img": "/img/pizza/img-3.jpg",
+                        "menu": "pizza"
+                    },
+                    { "id": 20, "name": "Fugit illo cum.", "slug": "fugit-illo-cum", "img": "/img/pizza/img-4.jpg", "menu": "pizza" },
+                    {
+                        "id": 21,
+                        "name": "Perferendis quidem nam excepturi.",
+                        "slug": "perferendis-quidem-nam-excepturi",
+                        "img": "/img/pizza/img-5.jpg",
+                        "menu": "pizza"
+                    },
+                    {
+                        "id": 22,
+                        "name": "Repellendus voluptatem velit.",
+                        "slug": "repellendus-voluptatem-velit",
+                        "img": "/img/pizza/img-6.jpg",
+                        "menu": "pizza"
+                    },
+                    { "id": 23, "name": "Ab et sed.", "slug": "ab-et-sed", "img": "/img/pizza/img-7.jpg", "menu": "pizza" },
+                    { "id": 24, "name": "Et dignissimos.", "slug": "et-dignissimos", "img": "/img/pizza/img-8.jpg", "menu": "pizza" }
+                ]
+            },
+            {
+                "id": 4,
+                "name": "bebidas",
+                "slug": "bebidas",
+                "img": "/img/menus/bebidas/banner.jpg",
+                "images": [
+                    {
+                        "id": 25,
+                        "name": "Rem veritatis maxime.",
+                        "slug": "rem-veritatis-maxime",
+                        "img": "/img/bebidas/img-1.jpg",
+                        "menu": "bebidas"
+                    },
+                    { "id": 26, "name": "Beatae odit non.", "slug": "beatae-odit-non", "img": "/img/bebidas/img-2.jpg", "menu": "bebidas" },
+                    {
+                        "id": 27,
+                        "name": "Occaecati aut earum.",
+                        "slug": "occaecati-aut-earum",
+                        "img": "/img/bebidas/img-3.jpg",
+                        "menu": "bebidas"
+                    },
+                    {
+                        "id": 28,
+                        "name": "Eos et sed incidunt ea.",
+                        "slug": "eos-et-sed-incidunt-ea",
+                        "img": "/img/bebidas/img-4.jpg",
+                        "menu": "bebidas"
+                    },
+                    {
+                        "id": 29,
+                        "name": "Fuga sed voluptas magni.",
+                        "slug": "fuga-sed-voluptas-magni",
+                        "img": "/img/bebidas/img-5.jpg",
+                        "menu": "bebidas"
+                    },
+                    {
+                        "id": 30,
+                        "name": "Adipisci similique occaecati.",
+                        "slug": "adipisci-similique-occaecati",
+                        "img": "/img/bebidas/img-6.jpg",
+                        "menu": "bebidas"
+                    },
+                    {
+                        "id": 31,
+                        "name": "Corporis facilis consequatur.",
+                        "slug": "corporis-facilis-consequatur",
+                        "img": "/img/bebidas/img-7.jpg",
+                        "menu": "bebidas"
+                    },
+                    {
+                        "id": 32,
+                        "name": "Dolore aperiam dolore magni.",
+                        "slug": "dolore-aperiam-dolore-magni",
+                        "img": "/img/bebidas/img-8.jpg",
+                        "menu": "bebidas"
+                    }
+                ]
+            }
+        ]
+    },
+    "locations": {
+        "banner": {
+            "title": "NUESTRAS UBICACIONES",
+            "img": "/img/locations/banner.jpg"
+        }
+    },
+    "team": {
+        "banner": {
+            "title": "NUESTRO EQUIPO",
+            "img": "/img/team/banner.jpg"
+        },
+        "people": [
+            {
+                "name": "SAM RICHARDSON",
+                "job": "Head chef",
+                "img": "/img/team/img-1.jpg"
+            },
+            {
+                "name": "JENNIFER HARPER",
+                "job": "Sous Chef",
+                "img": "/img/team/img-2.jpg"
+            },
+            {
+                "name": "JONATHAN CORONADO",
+                "job": "Head chef",
+                "img": "/img/team/img-3.jpg"
+            },
+            {
+                "name": "JONATHAN CORONADO",
+                "job": "Head chef",
+                "img": "/img/team/img-5.jpg"
+            },
+            {
+                "name": "SAM RICHARDSON",
+                "job": "Head chef",
+                "img": "/img/team/img-4.jpg"
+            },
+            {
+                "name": "JENNIFER HARPER",
+                "job": "Sous Chef",
+                "img": "/img/team/img-6.jpg"
+            },
+            {
+                "name": "JONATHAN CORONADO",
+                "job": "Head chef",
+                "img": "/img/team/img-7.jpg"
+            },
+            {
+                "name": "JONATHAN CORONADO",
+                "job": "Head chef",
+                "img": "/img/team/img-8.jpg"
+            }
+        ]
+    },
+    "faq": {
+        "banner": {
+            "title": "PREGUNTAS FRECUENTES",
+            "img": "/img/faq/banner.jpg"
+        }
+    },
+    "terms": {
+        "banner": {
+            "title": "TERMINOS Y CONDICIONES",
+            "img": "/img/terms/banner.jpg"
+        }
+    },
+    "gift-cards": {
+        "banner": {
+            "title": "TARJETAS  DE REGALO",
+            "img": "/img/gift-cards/banner.jpg"
+        },
+        "cards": [
+            {
+                "img": "img/gift-cards/img-1.png",
+                "text": "Fusce eu cursus non nulla vitae massa placerat purus undo congue augue",
+                "amount": 50
+            },
+            {
+                "img": "img/gift-cards/img-2.png",
+                "text": "Fusce eu cursus non nulla vitae massa placerat purus undo congue augue",
+                "amount": 85
+            },
+            {
+                "img": "img/gift-cards/img-3.png",
+                "text": "Fusce eu cursus non nulla vitae massa placerat purus undo congue augue",
+                "amount": 125
+            }
+        ]
+    },
+    "contact": {
+        "banner": {
+            "title": "CONTÁCTENOS",
+            "img": "/img/contact/banner.jpg"
+        }
+    }
+}

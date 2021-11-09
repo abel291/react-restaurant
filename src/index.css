@@ -8,7 +8,7 @@
 /* roboto */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 body {
-    @apply font-roboto text-gray-800;
+    @apply font-roboto text-gray-700;
 }
 .font-primary {
     @apply uppercase;
@@ -20,6 +20,9 @@ body {
     .pb-content {
         @apply pb-8;
     }
+    .pt-content {
+        @apply pt-8;
+    }
     /* //md */
     @media (min-width: 768px) {
         .py-content {
@@ -27,6 +30,9 @@ body {
         }
         .pb-content {
             @apply pb-10;
+        }
+        .pt-content {
+            @apply pt-10;
         }
     }
 
@@ -38,5 +44,93 @@ body {
         .pb-content {
             @apply pb-12;
         }
+        .pt-content {
+            @apply pt-12;
+        }
+    }
+    /* //lg */
+    @media (min-width: 1280px) {
+        .py-content {
+            @apply py-14;
+        }
+        .pb-content {
+            @apply pb-14;
+        }
+        .pt-content {
+            @apply pt-14;
+        }
+    }
+}
+
+.title-section {
+    @apply font-primary text-[2.5rem] uppercase leading-tight;
+}
+@media (min-width: 1024px) {
+    .title-section {
+        @apply text-5xl;
+    }
+}
+@media (min-width: 1280px) {
+    .title-section {
+        @apply text-6xl;
+    }
+}
+
+.galleries-image-hover:hover > img {
+    @apply transition duration-500 transform scale-110 brightness-50;
+}
+.galleries-image-hover:hover > div {
+    @apply transition duration-500 transform opacity-100  -translate-y-full;
+}
+.terms p {
+    @apply font-light mt-4;
+}
+
+.terms h5 {
+    @apply font-primary uppercase text-3xl;
+}
+.terms a {
+    @apply text-yellow-600 font-medium;
+}
+.terms ul {
+    @apply list-outside list-disc pl-4;
+}
+
+.btn {
+    @apply uppercase inline-block  font-primary text-white rounded  leading-none;
+}
+.btn-sm {
+    @apply py-3 px-8 text-base leading-none;
+}
+.btn-red {
+    @apply bg-red text-white;
+}
+.btn-lg {
+    @apply text-xl py-4 px-9 leading-none;
+}
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    @apply border border-gray-300 shadow-sm   rounded  px-4 font-light focus:ring-yellow-500 focus:border-yellow-500;
+}
+
+nav .nav-link-item {
+    @apply py-4 block px-4 rounded-md text-xl  bg-gray-50 font-primary uppercase leading-none;
+}
+
+.badge {
+    @apply text-xl rounded  leading-none;
+}
+.badge-sm {
+    @apply py-[5px] px-[10px];
+}
+.badge-md {
+    @apply py-2 px-3;
+}
+
+@media (min-width: 768px) {
+    .badge {
+        @apply text-[0.95rem];
     }
 }

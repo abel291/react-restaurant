@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "hamburguesas",
+        "slug": "hamburguesas",
+        "img": "/img/categories/hamburguesas/banner.jpg"
+    },
+    {
+        "id": 2,
+        "name": "ensaladas",
+        "slug": "ensaladas",
+        "img": "/img/categories/ensaladas/banner.jpg"
+    },
+    {
+        "id": 3,
+        "name": "pizza",
+        "slug": "pizza",
+        "img": "/img/categories/pizza/banner.jpg"
+    },
+    {
+        "id": 4,
+        "name": "bebidas",
+        "slug": "bebidas",
+        "img": "/img/categories/bebidas/banner.jpg"
+    }
+]

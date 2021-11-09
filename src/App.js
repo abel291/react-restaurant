@@ -1,18 +1,24 @@
-
-import {  BrowserRouter as Router } from "react-router-dom"
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import routes from "./layout/routes"
 import "./index.css"
 import Footer from "./layout/Footer"
-import Header from "./layout/Header"
-import Home from "./page/home/Home"
-
+import Navbar from "./layout/navbar/Navbar"
+import {QueryClient, QueryClientProvider } from "react-query"
+const queryClient = new QueryClient()
 function App() {
     return (
-        <Router>
-            {/* <Header/> */}
-            <Home/>
-            <Footer/>
-        </Router>
+        <QueryClientProvider client={queryClient}>
+            <Router>
+                <Navbar />
+                <Switch>
+                    {Object.values(routes).map((route) => (
+                        <Route key={route.path} exact path={route.path} component={route.component} />
+                    ))}
+                </Switch>
+
+                <Footer />
+            </Router>
+        </QueryClientProvider>
     )
 }
 

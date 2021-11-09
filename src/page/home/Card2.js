@@ -1,4 +1,4 @@
-import Button from "../../components/Button"
+
 
 const Card2 = () => {
     return (
@@ -10,7 +10,7 @@ const Card2 = () => {
             <p className=" text-base lg:text-lg leading-none  mt-3">Enjoy Testo Burgers at home</p>
 
             <div className="mt-4">
-                <Button />
+            <button className="btn btn-red btn-sm">Conoce mas</button>
             </div>
         </div>
     )
