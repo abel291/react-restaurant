@@ -1,10 +1,16 @@
 import { useRef } from "react"
 import { fomatCurrency } from "../../helpers/helpers"
-import { useApplyDiscount } from "../../hooks/useShoppingCart"
+import { useApplyDiscount, useShoppingCart } from "../../hooks/useShoppingCart"
 import discountCodes from "../../api/fakeData/discountCodes.json"
-const CartResumen = ({ shoppingCart }) => {
+
+const CartResumen = () => {
     const discountRef = useRef("")
     const applyDiscount = useApplyDiscount()
+
+    const { isLoading, error, data: shoppingCart } = useShoppingCart()
+    if (isLoading) return "..."
+    if (error) return "error"
+
     const handleClickDiscount = (e) => {
         if (discountRef.current.value === "") {
             return
@@ -14,10 +20,10 @@ const CartResumen = ({ shoppingCart }) => {
     }
 
     return (
-        <div className="mt-20  flex justify-end">
-            <div className="w-full lg:w-96">
+        
+            <div>
                 <div className=" p-12 rounded-md bg-gray-100 text-left">
-                    <h5 className="text-3xl font-primary"> Resumen del pedido</h5>
+                    <h5 className="text-3xl font-primary"> Pedidos</h5>
                     <div className="mt-5 divide-y divide-gray-200 font-medium text-xl">
                         <div className="flex justify-between py-5  leading-none">
                             <div>Subtotal</div>
@@ -41,18 +47,19 @@ const CartResumen = ({ shoppingCart }) => {
                     <button
                         disabled={applyDiscount.isLoading}
                         onClick={handleClickDiscount}
-                        className="btn px-5 py-3 bg-yellow-500 text-white ml-3 disabled:opacity-50"
+                        className="btn px-5 py-3 bg-yellow-500 text-white ml-3 disabled:opacity-50 "
                     >
                         {applyDiscount.isLoading ? "Cargando...." : "Aplicar Cupon"}
                     </button>
                 </div>
+                
                 <div>
                     {discountCodes.map((item) => (
                         <span className="text-sm text-gray-400 ml-3">{item.code}</span>
                     ))}
                 </div>
             </div>
-        </div>
+        
     )
 }
 

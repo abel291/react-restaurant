@@ -58,11 +58,11 @@ const Feature = ({ product }) => {
                 </div>
 
                 <button
-                    className=" flex items-center bg-yellow-400 py-3 px-8 rounded  justify-center md:justify-start"
+                    className=" flex items-center bg-yellow-400 py-3 px-8 rounded  justify-center md:justify-start disabled:opacity-50"
                     onClick={handlehandleClickAddProductToCart}
                     disabled={addProductToCart.isLoading}
                 >
-                    {addProductToCart.isLoading && <span className=" leading-none font-bold ml-2">agregando....</span>}
+                    {addProductToCart.isLoading && <span className=" leading-none font-bold ml-2">Agregando....</span>}
 
                     {!addProductToCart.isLoading && (
                         <>
