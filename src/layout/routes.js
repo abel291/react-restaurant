@@ -1,4 +1,5 @@
 import About from "../page/about/About"
+
 import Contact from "../page/contact/Contact"
 import Faq from "../page/faq/Faq"
 import Gallery from "../page/gallery/Gallery"
@@ -77,6 +78,6 @@ const routes = {
         name: "Carrtio de compras",
         path: "/shopping-cart",
         component: ShoppingCart,
-    },
+    }
 }
 export default routes
