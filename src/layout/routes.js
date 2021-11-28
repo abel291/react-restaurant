@@ -1,3 +1,4 @@
+import Login from "../auth/Login"
 import About from "../page/about/About"
 
 import Contact from "../page/contact/Contact"
@@ -78,6 +79,11 @@ const routes = {
         name: "Carrtio de compras",
         path: "/shopping-cart",
         component: ShoppingCart,
+    },
+    login: {
+        name: "Login",
+        path: "/login",
+        component: Login,
     }
 }
 export default routes

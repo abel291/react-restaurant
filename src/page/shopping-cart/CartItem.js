@@ -12,6 +12,7 @@ const CartItem = ({ product }) => {
             return
         }
         let id = product.id
+        
         addProductToCart.mutate({ id, quantity })
     }
 

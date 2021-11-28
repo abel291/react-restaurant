@@ -7,7 +7,7 @@ const BannerHero = ({ title = "...", img, breadcrumb }) => {
                     <h2 className="title-section mt-4">{title}</h2>
                 </div>
                 <div className="absolute inset-0 z-[-1]">
-                    <img src={img} alt="" className=" max-h-full w-full object-cover brightness-75" />
+                    <img src={img} alt="" className=" max-h-full w-full object-cover brightness-50" />
                 </div>
             </div>
         </div>

@@ -2,8 +2,10 @@ import { Menu, Transition } from "@headlessui/react"
 import { ChevronDownIcon, ShoppingBagIcon } from "@heroicons/react/solid"
 import { Fragment } from "react"
 import { Link, NavLink } from "react-router-dom"
+import { useUser } from "../../hooks/useAuth"
 import Logo from "../Logo"
 import routes from "../routes"
+import ProfileDropdown from "./ProfileDropdown"
 const routesAbout = [
     {
         name: routes.about.name,
@@ -31,6 +33,7 @@ const routesAbout = [
     },
 ]
 const NavbarDesktop = () => {
+    const { data: user } = useUser()
     return (
         <div className="container py-5 text-white absolute inset-x-0  ">
             <div className="h-20 flex items-center justify-between">
@@ -56,6 +59,14 @@ const NavbarDesktop = () => {
                         <NavLink to={routes.shoppingCart.path}>
                             <ShoppingBagIcon className="h-8 w-8" />
                         </NavLink>
+                        {user?(
+                            <ProfileDropdown/>
+                        ):(
+                            <NavLink to={routes.login.path}>
+                                Login
+                            </NavLink>
+                        )}
+                        
                     </div>
                 </div>
             </div>

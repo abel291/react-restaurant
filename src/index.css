@@ -109,6 +109,7 @@ body {
     @apply text-xl py-4 px-9 leading-none;
 }
 input[type="text"],
+input[type="password"],
 input[type="email"],
 select,
 textarea {
