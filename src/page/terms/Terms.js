@@ -4,14 +4,9 @@ import PageError from "../../components/PageError"
 import usePage from "../../hooks/usePage"
 
 const Terms = () => {
-    const { isLoading, error, data: pageData } = usePage("terms")
-
-    if (isLoading) return <PageLoading />
-
-     if (error) return <PageError />
     return (
         <main>
-            <BannerHero img={pageData.banner.img} title={pageData.banner.title} />
+            <BannerHero title="TERMINOS Y CONDICIONES" img="/img/terms/banner.jpg" />
 
             <div className="container py-content max-w-5xl">
                 <div className="terms space-y-10">
@@ -105,14 +100,11 @@ const Terms = () => {
                             Sagittis congue augue egestas volutpat egestas magna suscipit egestas magna ipsum vitae purus efficitur ipsum
                             primis in cubilia laoreet augue egestas luctus donec diam. Curabitur ac dapibus libero. Quisque eu tristique
                             neque. Phasellus blandit tristique justo ut aliquam. Aliquam vitae
-                            <a  href="/">
-                                molestie nunc sapien justo
-                            </a>
-                            , aliquet non molestie sed, venenatis nec purus. Aliquam eget lacinia elit. Vestibulum tincidunt tincidunt
-                            massa, et porttitor
+                            <a href="/">molestie nunc sapien justo</a>, aliquet non molestie sed, venenatis nec purus. Aliquam eget lacinia
+                            elit. Vestibulum tincidunt tincidunt massa, et porttitor
                         </p>
 
-                        <ul >
+                        <ul>
                             <li>
                                 <p>
                                     Donec dolor magna, suscipit in magna dignissim, porttitor hendrerit diam. Nunc gravida ultrices felis
@@ -136,10 +128,7 @@ const Terms = () => {
                         <p>
                             Suscipit in magna dignissim, porttitor hendrerit diam. Nunc gravida ultrices felis eget faucibus. Praesent
                             aliquet lorem purus, quis mollis nisi laoreet vitae.
-                            <a  href="/">
-                                
-                                Mauris nec consequat tortor
-                            </a>
+                            <a href="/">Mauris nec consequat tortor</a>
                         </p>
                     </div>
                 </div>

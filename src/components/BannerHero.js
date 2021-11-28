@@ -1,7 +1,7 @@
-const BannerHero = ({ title = "home home", img, breadcrumb }) => {
+const BannerHero = ({ title = "...", img, breadcrumb }) => {
     return (
         <div className="pb-content ">
-            <div className="pt-20 pb-20 lg:pt-48 lg:pb-36 relative z-[-1] bg-gray-500">
+            <div className="pt-20 pb-20 lg:pt-48 lg:pb-36 relative z-[-1] bg-gray-200">
                 <div className="text-center text-white  ">
                     <div className="text-sm font-roboto font-bold uppercase leading-none">{breadcrumb}</div>
                     <h2 className="title-section mt-4">{title}</h2>

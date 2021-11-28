@@ -1,4 +1,5 @@
-import LinkProduct from "../../components/LinkProduct"
+import { Link } from "react-router-dom"
+
 import { fomatCurrency } from "../../helpers/helpers"
 
 const MenuItem = ({ product }) => {
@@ -6,9 +7,9 @@ const MenuItem = ({ product }) => {
         <div className="flex flex-col md:flex-row justify-between">
             <div className="md:mr-4 text-center md:text-left flex-grow">
                 <div className="flex  md:text-left justify-center md:justify-start ">
-                    <LinkProduct product={product}>
+                    <Link to={"/product/"+ product.slug}>
                         <h5 className=" font-primary text-3xl md:text-2xl md:mr-1 leading-none">{product.name}</h5>
-                    </LinkProduct>
+                    </Link>
                     <div className="hidden md:inline-block border-b-2 border-gray-400 border-dotted flex-grow"></div>
                 </div>
 

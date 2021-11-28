@@ -1,13 +1,13 @@
 import ProductItem from "../../components/ProductItem"
 
-const MenuSectionList = ({ title, products }) => {
+const MenuSectionList = ({ category }) => {
     return (
         <div className="py-content">
             <div className="text-center">
-                <h3 className="title-section text-red">{title}</h3>
+                <h3 className="title-section text-red">{category.name}</h3>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mt-9 lg:mt-16">
-                {products.map((product) => (
+                {category.products.map((product) => (
                     <ProductItem key={product.id} product={product} />
                 ))}
             </div>

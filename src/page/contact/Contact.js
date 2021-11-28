@@ -7,14 +7,9 @@ import Information from "./Information"
 import MapFrime from "./MapFrime"
 
 const Contact = () => {
-    const { isLoading, error, data: pageData } = usePage("contact")
-
-    if (isLoading) return <PageLoading />
-
-     if (error) return <PageError />
     return (
         <main>
-            <BannerHero img={pageData.banner.img} title={pageData.banner.title} />
+            <BannerHero title="CONTÁCTENOS" img="/img/contact/banner.jpg" />
             <div className="container py-content">
                 <div className="py-content">
                     <Information />

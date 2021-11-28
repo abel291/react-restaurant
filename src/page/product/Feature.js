@@ -3,19 +3,19 @@ import { useState } from "react"
 import Stars from "../../components/Stars"
 import { useAddProductToCart } from "../../hooks/useShoppingCart"
 import { fomatCurrency } from "../../helpers/helpers"
-import SelectValues from "./SelectValues"
+import SelectQuantity from "./SelectQuantity"
 
 const Feature = ({ product }) => {
     const [quantity, setquantity] = useState(1)
-    const handleChangeQuantity = (e) => {
-        setquantity(e.target.value)
+    const handleChangeQuantity = (newQuantity) => {
+        setquantity(newQuantity)
     }
 
     const addProductToCart = useAddProductToCart()
 
-    const handlehandleClickAddProductToCart = (e) => {
-        let slug = product.slug
-        addProductToCart.mutate({ slug, quantity })
+    const handlehandleClickAddProductToCart = () => {
+        let id = product.id
+        addProductToCart.mutate({ id, quantity })
     }
 
     return (
@@ -53,8 +53,8 @@ const Feature = ({ product }) => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                <div className="">
-                    <SelectValues value={quantity} product={product} onChange={handleChangeQuantity} />
+                <div >
+                    <SelectQuantity  quantity={quantity} stock={product.stock} onChange={handleChangeQuantity} />
                 </div>
 
                 <button
@@ -72,7 +72,7 @@ const Feature = ({ product }) => {
                     )}
                 </button>
             </div>
-            <div className="">
+            <div >
                 <ul className="font-light list-disc  space-y-1 text-md mt-6 lg:mt-10 ml-4">
                     <li>Aceptamos tarjetas de crédito o efectivo a mensajería</li>
                     <li>El costo de envío es de $ 2 (Gratis desde $ 35)</li>

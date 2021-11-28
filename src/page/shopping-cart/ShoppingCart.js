@@ -12,7 +12,7 @@ const ShoppingCart = () => {
     if (isLoading) return <PageLoading />
 
     if (error) return <PageError />
-
+    
     return (
         <main>
             <BannerHero title="Carrito de compras" img="/img/shopping-cart/banner.jpg" breadcrumb="home / carrtio de compra" />

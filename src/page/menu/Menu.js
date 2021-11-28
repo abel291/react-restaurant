@@ -5,18 +5,19 @@ import usePage from "../../hooks/usePage"
 import MenuSectionList from "./MenuSectionList"
 
 const Menu = () => {
-    const { isLoading, error, data: pageData } = usePage("menus")
+    const { isLoading, error, data } = usePage("menu")
 
     if (isLoading) return <PageLoading />
 
-     if (error) return <PageError />
+    if (error) return <PageError />
 
     return (
+        
         <main>
-            <BannerHero img={pageData.banner.img} title={pageData.banner.title} breadcrumb="/ Menu" />
+            <BannerHero img="/img/menu/banner-1.jpg" title="MENU" breadcrumb="/ Menu" />
             <div className="container ">
-                {pageData.categories.map((category,index) => (
-                    <MenuSectionList key={category.id} title={category.name} products={category.products} />
+                {data.menu.map((category) => (
+                    <MenuSectionList key={category.id} category={category} />
                 ))}
             </div>
         </main>

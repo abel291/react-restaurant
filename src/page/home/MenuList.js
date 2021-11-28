@@ -17,7 +17,7 @@ const MenuList = ({title,products,img}) => {
                     
                 </div>
                 <div className="md:mt-8 lg:mt-16">
-                    <img src={img} alt="d" className="w-full" />
+                    <img src={img} alt="img banner" className="w-full" />
                 </div>
             </div>
         </div>

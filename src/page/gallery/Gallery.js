@@ -6,7 +6,7 @@ import PageError from "../../components/PageError"
 
 const Gallery = () => {
 
-    const { isLoading, error, data: pageData } = usePage("gallery")
+    const { isLoading, error, data } = usePage("gallery")
 
     if (isLoading) return <PageLoading />
 
@@ -15,8 +15,8 @@ const Gallery = () => {
         <main>
             <BannerHero title="Galeria de imagenes" img="img/galleries/banner.jpg" breadcrumb="home / galeria" />
             <div className="container ">
-                {pageData.menus.map((menu) => (
-                    <GalleryImagesList title={menu.name} images={menu.images} />
+                {data.galleries.map((gallery) => (
+                    <GalleryImagesList key={gallery.id} gallery={gallery} />
                 ))}
             </div>
         </main>

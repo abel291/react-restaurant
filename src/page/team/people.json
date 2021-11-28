@@ -2,41 +2,41 @@
     {
         "name": "SAM RICHARDSON",
         "job": "Head chef",
-        "img": "img-1.jpg"
+        "img": "/img/team/img-1.jpg"
     },
     {
         "name": "JENNIFER HARPER",
         "job": "Sous Chef",
-        "img": "img-2.jpg"
+        "img": "/img/team/img-2.jpg"
     },
     {
         "name": "JONATHAN CORONADO",
         "job": "Head chef",
-        "img": "img-3.jpg"
+        "img": "/img/team/img-3.jpg"
     },
     {
         "name": "JONATHAN CORONADO",
         "job": "Head chef",
-        "img": "img-5.jpg"
+        "img": "/img/team/img-5.jpg"
     },
     {
         "name": "SAM RICHARDSON",
         "job": "Head chef",
-        "img": "img-4.jpg"
+        "img": "/img/team/img-4.jpg"
     },
     {
         "name": "JENNIFER HARPER",
         "job": "Sous Chef",
-        "img": "img-6.jpg"
+        "img": "/img/team/img-6.jpg"
     },
     {
         "name": "JONATHAN CORONADO",
         "job": "Head chef",
-        "img": "img-7.jpg"
+        "img": "/img/team/img-7.jpg"
     },
     {
         "name": "JONATHAN CORONADO",
         "job": "Head chef",
-        "img": "img-8.jpg"
+        "img": "/img/team/img-8.jpg"
     }
 ]

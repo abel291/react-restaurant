@@ -5,14 +5,14 @@ import usePage from "../../hooks/usePage"
 import GiftCardsItem from "./GiftCardsItem"
 
 const GiftCards = () => {
-    const { isLoading, error, data: pageData } = usePage("gift-cards")
+    const { isLoading, error, data } = usePage("gift-cards")
 
     if (isLoading) return <PageLoading />
 
      if (error) return <PageError />
     return (
         <main>
-            <BannerHero img={pageData.banner.img} title={pageData.banner.title} />
+            <BannerHero title="TARJETAS  DE REGALO" img="/img/gift-cards/banner.jpg" />
             <div className="container">
                 <div className="max-w-xl mx-auto text-center py-content">
                     <h3 className="title-section">SELECCIONA TU TARJETA</h3>
@@ -23,7 +23,7 @@ const GiftCards = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 py-content">
-                    {pageData.cards.map((card) => (
+                    {data.cards.map((card) => (
                         <GiftCardsItem key={card.id} card={card} />
                     ))}
                 </div>

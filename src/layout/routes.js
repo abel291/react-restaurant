@@ -71,7 +71,7 @@ const routes = {
     product: {
         name: "product",
         //path: "/product/:slug",
-        path: "/product/:categorySlug/:productSlug",
+        path: "/product/:productSlug",
         component: Product,
     },
     shoppingCart: {

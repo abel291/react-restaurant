@@ -10,19 +10,19 @@ import PageLoading from "../../components/PageLoading"
 import PageError from "../../components/PageError"
 
 const Home = () => {
-    const { isLoading, error, data: pageData } = usePage("home")
+    const { isLoading, error, data } = usePage("home")
 
     if (isLoading) return <PageLoading />
 
     if (error) return <PageError />
-
+    
     return (
         <main>
-            <BannerHero img={pageData.banner.img} title={pageData.banner.title} breadcrumb="" />
+            <BannerHero img="/img/home/banner.jpg" title="COMPARTE Y DISFRUTA" breadcrumb="" />
             <div className="container ">
                 <div className=" py-content">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {pageData.promos.map((promo) => (
+                        {data.promos.map((promo) => (
                             <div key={promo.title}>
                                 <Card title={promo.title} subTitle={promo.sub_title} img={promo.img} path={promo.img} />
                             </div>
@@ -36,8 +36,11 @@ const Home = () => {
                     </div>
                 </div>
                 <div className=" py-content">
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {pageData.productsFeatured.map((product) => (
+                    <div className="text-center">
+                        <h3 className="title-section text-red">EXPLORA NUESTRO MENÚ</h3>
+                    </div>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:mt-8 lg:mt-16">
+                        {data.products_featured.map((product) => (
                             <ProductItem product={product} key={product.id} />
                         ))}
                     </div>
@@ -47,7 +50,7 @@ const Home = () => {
                 <Promo />
             </div>
             <div className="container   ">
-                {pageData.categories_section.map((category) => (
+                {data.menus.map((category) => (
                     <div className="py-content" key={category.id}>
                         <MenuList title={category.name} products={category.products} img={category.img} />
                     </div>

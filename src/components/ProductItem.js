@@ -1,12 +1,13 @@
 //import { ShoppingBagIcon } from "@heroicons/react/outline"
 
+import { Link } from "react-router-dom"
 import { fomatCurrency } from "../helpers/helpers"
-import LinkProduct from "./LinkProduct"
+
 import Stars from "./Stars"
 
 const ProductItem = ({ product }) => {
     return (
-        <LinkProduct product={product}>
+        <Link to={"/product/"+ product.slug}>
             <div className="rounded-lg overflow-hidden  border border-gray-200 flex flex-col h-full bg-white">
                 <div className="h-80 md:h-60 flex items-center justify-center">
                     <img src={product.img} alt={product.img} className="w-full max-h-full object-cover" />
@@ -32,7 +33,7 @@ const ProductItem = ({ product }) => {
                     </div>
                 </div>
             </div>
-        </LinkProduct>
+        </Link>
     )
 }
 

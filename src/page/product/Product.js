@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+
 import { useParams } from "react-router"
 import BannerHero from "../../components/BannerHero"
 import PageLoading from "../../components/PageLoading"
@@ -13,9 +13,9 @@ import Images from "./Images"
 import RelatedProducts from "./RelatedProducts"
 
 const Product = () => {
-    const { categorySlug, productSlug } = useParams()
+    const { productSlug } = useParams()
 
-    const { isLoading, error, data } = useProduct(categorySlug, productSlug)
+    const { isLoading, error, data } = useProduct(productSlug)
     
     if (isLoading) return <PageLoading />
 
@@ -40,7 +40,7 @@ const Product = () => {
                 </div>
             </div>
             <div className="pt-content">
-                <RelatedProducts products={data.relateProducts} />
+                <RelatedProducts products={data.related_products} />
             </div>
         </main>
     )

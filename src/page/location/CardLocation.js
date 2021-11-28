@@ -3,7 +3,7 @@ const CardLocation = ({ title, phone = "879-123-444", address, img }) => {
         <div>
             <div className="overflow-hidden">
                 <img
-                    src={"/img/locations/" + img}
+                    src={ img}
                     alt={img}
                     className="object-cover w-full md:h-96 transition duration-500 transform hover:scale-110 hover:brightness-75  "
                 />
