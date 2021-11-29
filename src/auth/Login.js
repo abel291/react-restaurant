@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useHistory } from "react-router-dom"
 import BannerHero from "../components/BannerHero"
+import InputLabel from "../components/InputLabel"
 import NotificationError from "../components/NotificationError"
 import SpinnerLoad from "../components/SpinnerLoad"
 import { useLogin, useUser } from "../hooks/useAuth"
@@ -35,40 +36,30 @@ const Login = () => {
 
     return (
         <main>
-            <BannerHero title="Inicio de sesion" img="/img/login.jpg" breadcrumb="" />
+            <BannerHero title="Inicio de sesion" img="/img/auth/login.jpg" breadcrumb="" />
             <div className="flex items-center justify-center pb-content">
                 <div className="max-w-md w-full space-y-8">
                     <h2 className="font-primary text-xl text-center px-5">Inicie sesión con su correo electrónico y contraseña</h2>
-                    {loginMutator.error && (
-                        <div className="py-2">
-                            <NotificationError error={loginMutator.error} />
-                        </div>
-                    )}
+                    {loginMutator.error && <NotificationError error={loginMutator.error} />}
                     <form onSubmit={handleSubmit} className="space-y-7">
                         <div>
-                            <label className="block text-sm font-medium" htmlFor="email">
-                                Email 
-                            </label>
-                            <input
-                                value={dataForm.email}
+                            <InputLabel
+                                require={true}
                                 onChange={handleChangle}
-                                className="w-full mt-1"
                                 name="email"
+                                value={dataForm.email}
+                                label={"Email *"}
                                 type="email"
-                                //required
                             />
                         </div>
                         <div>
-                            <label className="block text-sm font-medium" htmlFor="email">
-                                Contraseña
-                            </label>
-                            <input
-                                value={dataForm.password}
+                            <InputLabel
+                                require={true}
                                 onChange={handleChangle}
-                                className="w-full mt-1"
-                                name="password"
                                 type="password"
-                                //required
+                                name="password"
+                                value={dataForm.password}
+                                label={"Contraseña *"}
                             />
                         </div>
                         <div className="flex items-center justify-between text-sm">
@@ -76,7 +67,7 @@ const Login = () => {
                                 <input
                                     name="remember"
                                     type="checkbox"
-                                    className="h-4 w-4"
+                                    className="h-4 w-4 rounded text-red"
                                     checked={dataForm.remember}
                                     onChange={handleChangle}
                                 />

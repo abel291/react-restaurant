@@ -1,21 +1,19 @@
 import { Route, Redirect, useLocation } from "react-router-dom"
-import OnLoadingPage from "../components/OnLoadingPage"
-import useAuth from "../hooks/useAuth"
 
+import PageLoading from "../components/PageLoading"
+import { useUser } from "../hooks/useAuth"
 
 //import { useEffect, useState } from "react"
 
 const PrivateRoute = (props) => {
-    
     const location = useLocation()
-    const { userData } = useAuth()
-    const { isLoading, error, data: user }=userData
+    const user = useUser()
 
-    if (isLoading) return <OnLoadingPage />
+    if (user.isLoading) return <PageLoading />
 
-    if (error) return "An error has occurred: " + error.message
+    if (user.error) return "An error has occurred: " + user.error.message
 
-    return user ? (
+    return user.data ? (
         <Route {...props} />
     ) : (
         <Redirect

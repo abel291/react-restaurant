@@ -36,6 +36,27 @@ export const useLogin = (dataLogin) => {
         }
     )
 }
+
+export const useRegister = (registerData) => {
+    const apiAuthClient = useApiAuthClient()
+    const queryClient = useQueryClient()
+    return useMutation(
+        async (registerData) => {
+            const response = await apiAuthClient.post("/auth/register", {
+                ...registerData,
+            })
+
+            return response
+        },
+        {
+            onSuccess: function (res) {
+                queryClient.setQueryData("USER", () => {
+                    return res.data.user
+                })
+            },
+        }
+    )
+}
 export const useLogout = () => {
     const apiAuthClient = useApiAuthClient()
     const queryClient = useQueryClient()

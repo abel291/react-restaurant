@@ -4,8 +4,7 @@ const GiftCardsItem = ({ card }) => {
     const addProductToCart = useAddProductToCart()
 
     const handlehandleClickAddProductToCart = (e) => {
-        let slug = card.slug
-        addProductToCart.mutate({ slug, quantity: 1 })
+        addProductToCart.mutate({ id: card.id, quantity: 1 })
     }
     return (
         <div className="text-center">

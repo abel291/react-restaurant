@@ -2,10 +2,10 @@ import { Menu, Transition } from "@headlessui/react"
 import { ChevronDownIcon, ShoppingBagIcon } from "@heroicons/react/solid"
 import { Fragment } from "react"
 import { Link, NavLink } from "react-router-dom"
-import { useUser } from "../../hooks/useAuth"
+//import { useUser } from "../../hooks/useAuth"
 import Logo from "../Logo"
 import routes from "../routes"
-import ProfileDropdown from "./ProfileDropdown"
+//import ProfileDropdown from "./ProfileDropdown"
 const routesAbout = [
     {
         name: routes.about.name,
@@ -33,7 +33,7 @@ const routesAbout = [
     },
 ]
 const NavbarDesktop = () => {
-    const { data: user } = useUser()
+    //const { data: user } = useUser()
     return (
         <div className="container py-5 text-white absolute inset-x-0  ">
             <div className="h-20 flex items-center justify-between">
@@ -48,8 +48,6 @@ const NavbarDesktop = () => {
                             {routes.menu.name}
                         </NavLink>
 
-                        {/* <NavLink to={routes.about.path}>{routes.about.name}</NavLink> */}
-
                         <NavLink to={routes.gallery.path}>{routes.gallery.name}</NavLink>
 
                         <NavLink to={routes.hours.path}>{routes.hours.name}</NavLink>
@@ -59,14 +57,13 @@ const NavbarDesktop = () => {
                         <NavLink to={routes.shoppingCart.path}>
                             <ShoppingBagIcon className="h-8 w-8" />
                         </NavLink>
-                        {user?(
+                        {/* {user?(
                             <ProfileDropdown/>
                         ):(
                             <NavLink to={routes.login.path}>
                                 Login
                             </NavLink>
-                        )}
-                        
+                        )} */}
                     </div>
                 </div>
             </div>
@@ -93,9 +90,9 @@ const MenuHeader = ({ title, data }) => {
                 <Menu.Items className="absolute right-0 w-60 mt-2 origin-top-right bg-yellow-500 divide-y divide-yellow-600 divide-opacity-30  shadow-lg focus:outline-none text-white uppercase font-roboto font-bold text-sm tracking-wide rounded">
                     {data.map((item) => (
                         <Menu.Item key={item.path}>
-                            <div className="py-3     px-3">
-                                <Link to={item.path}>{item.name}</Link>
-                            </div>
+                            <Link to={item.path} className="py-3 px-3 block">
+                                {item.name}
+                            </Link>
                         </Menu.Item>
                     ))}
                 </Menu.Items>

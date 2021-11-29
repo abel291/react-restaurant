@@ -1,12 +1,15 @@
+import { XCircleIcon, XIcon } from "@heroicons/react/solid"
 import { useRef } from "react"
 import { useQuery } from "react-query"
+import SpinnerLoad from "../../components/SpinnerLoad"
 import apiClient from "../../helpers/apiClient"
 import { fomatCurrency } from "../../helpers/helpers"
-import { useApplyDiscount, useShoppingCart } from "../../hooks/useShoppingCart"
+import { useApplyDiscount, useRemoveDiscount, useShoppingCart } from "../../hooks/useShoppingCart"
 
 const CartResumen = () => {
     const discountRef = useRef("")
     const applyDiscount = useApplyDiscount()
+    const removeDiscount = useRemoveDiscount()
 
     const { isLoading, error, data: shoppingCart } = useShoppingCart()
 
@@ -29,18 +32,29 @@ const CartResumen = () => {
     if (error) return "error"
 
     const handleClickDiscount = (e) => {
-        console.log(discountRef.current.value)
+        
         if (discountRef.current.value === "") {
             return
         }
         let code = discountRef.current.value
         applyDiscount.mutate({ code })
-        code = ""
+        discountRef.current.value=''
+    }
+
+    const handleClickRemoveDiscount = (code) => {
+        removeDiscount.mutate({code})
     }
 
     return (
         <div>
-            <div className=" p-12 rounded-md bg-gray-100 text-left">
+            <div className=" p-12 rounded-md bg-gray-100 text-left relative">
+                {(removeDiscount.isLoading || applyDiscount.isLoading) && (
+                    <div className="flex items-center absolute inset-0 justify-center">
+                        <div className="absolute inset-0 bg-gray-300 filter brightness-125 opacity-50"></div>
+                        <SpinnerLoad styleClass="h-7 w-7" />
+                    </div>
+                )}
+
                 <h5 className="text-3xl font-primary"> Pedidos</h5>
                 <div className="mt-5 divide-y divide-gray-200 font-medium ">
                     <div className="flex justify-between py-4  leading-none">
@@ -56,8 +70,14 @@ const CartResumen = () => {
                         <div>{fomatCurrency(shoppingCart.meta.tax_amount)}</div>
                     </div>
                     {shoppingCart.meta.discount_apply && (
+
                         <div className="flex justify-between py-4 text-green-500 ">
-                            <div>Descuento {shoppingCart.meta.discount_apply.percent}%</div>
+                            <div className="flex items-center">
+                                <button onClick={()=>handleClickRemoveDiscount(shoppingCart.meta.discount_apply.code)}>
+                                    <XIcon className="h-5 w-5 text-gray-400" />
+                                </button>
+                                <div className="ml-2">Descuento {shoppingCart.meta.discount_apply.percent}%</div>
+                            </div>
                             <div>-{fomatCurrency(shoppingCart.meta.discount_apply.amount)}</div>
                         </div>
                     )}
@@ -80,8 +100,7 @@ const CartResumen = () => {
             </div>
             <span className="text-sm text-red">{applyDiscount.error && applyDiscount.error.message}</span>
 
-
-            {discount_availables.isLoading && "..."}            
+            {discount_availables.isLoading && "..."}
             {discount_availables.data && (
                 <div className="space-x-3 mt-2">
                     {discount_availables.data.map((item) => (

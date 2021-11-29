@@ -15,7 +15,7 @@ const Home = () => {
     if (isLoading) return <PageLoading />
 
     if (error) return <PageError />
-    
+
     return (
         <main>
             <BannerHero img="/img/home/banner.jpg" title="COMPARTE Y DISFRUTA" breadcrumb="" />
@@ -50,8 +50,8 @@ const Home = () => {
                 <Promo />
             </div>
             <div className="container   ">
-                {data.menus.map((category) => (
-                    <div className="py-content" key={category.id}>
+                {data.menus.map((category, index) => (
+                    <div className="py-content" key={index}>
                         <MenuList title={category.name} products={category.products} img={category.img} />
                     </div>
                 ))}

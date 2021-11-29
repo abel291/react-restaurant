@@ -101,3 +101,30 @@ export const useApplyDiscount = () => {
         }
     )
 }
+
+export const useRemoveDiscount = () => {
+    const queryClient = useQueryClient()
+
+    return useMutation(
+        async ({ code }) => {
+            const response = await apiClient
+                .get("shopping-cart/remove-cupon-discount", { params: { code: code } })
+                .then((res) => {
+                    return res.data
+                })
+                .catch((error) => {
+                    throw new Error(error.response.data.message)
+                })
+
+            return response
+        },
+        {
+            onSuccess: function (response) {
+                queryClient.setQueryData("shopping-cart", (oldData) => {
+                    oldData.meta = response
+                    return oldData
+                })
+            },
+        }
+    )
+}
